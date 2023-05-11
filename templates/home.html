@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>PLACES</title>
+    <style>{% include "style.css" %}</style>
+    <script type="text/javascript">{% include "script.js" %}</script>
+  </head>
+  <body>
+    <div class="control-panel">
+      <button class="mood-button" id="food-button">Food</button>
+      <button class="mood-button" id="parking-button">Parking</button>
+      <button class="mood-button" id="walking-button">Walking</button>
+      <button class="mood-button" id="weather-button">{{ weather_icon }}</button>
+      <button class="refresh-button" id="refresh">⟳</button>
+    </div>
+    <div class="container">
+      <div class="title">
+        <p>Today's Recommends</p>
+      </div>
+      <div class="places">
+        <div class="morning">
+          <div class="place">
+            <div class="underline">Morning</div>
+            <p>{{ morning_place }}</p>
+          </div>
+          <div class="precipitation">
+            {% for image in morning_images %}
+              <figure>
+                <img src="data:image/png;base64,{{ image.1 }}">
+                <figcaption>{{ image.0 }}</figcaption>
+              </figure>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="space"><p>&nbsp;</P></div>
+        <div class="afternoon">
+          <div class="place">
+            <div class="underline">Afternoon</div>
+            <p>{{ afternoon_place }}</p>
+          </div>
+          <div class="precipitation">
+            {% for image in afternoon_images %}
+              <figure>
+                <img src="data:image/png;base64,{{ image.1 }}">
+                <figcaption>{{ image.0 }}</figcaption>
+              </figure>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

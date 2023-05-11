@@ -1,0 +1,77 @@
+.container {
+    width: fit-content;
+    color: #333;
+    margin-left: 1em;
+}
+.places {
+    width: fit-content;
+    padding: 1em 1em;
+    border: solid 1px;
+    border-color: #DDD;
+}
+div.places p {
+    text-indent: 1em;
+    padding: 0;
+    margin: 0 1em 0 0;
+}
+div.title p {
+    text-align: center;
+    padding: 0;
+}
+.underline {
+    margin-bottom: 0.3em;
+}
+.morning .underline {
+    background: linear-gradient(transparent 60%, #DDF 0%)
+}
+.afternoon .underline {
+    background: linear-gradient(transparent 60%, #FEA 0%)
+}
+.precipitation {
+    margin: 0.5em 0 0 0;
+}
+.precipitation figure {
+    display: inline-block;
+    margin: 0 1px;
+    font-size: 0.9em;
+    text-align: center;
+}
+.precipitation img {
+    border: solid 1px;
+    border-color: #EEF;
+}
+.option-false {
+    position: relative;
+  }
+  .option-false::before {
+    position: absolute;
+    content: "";
+    display: block;
+    transform: rotate(20deg);
+    background-color: #E88;
+    width: 100%;
+    height: 0.15em;
+    top: 50%;
+    left: 0;
+  }
+  .option-disable {
+    opacity: 0.2;
+  }
+  .mood-button {
+    border: 1px solid #DDD;
+    width: 5em;
+    height: 2em;
+    border-radius: 0.5em;
+    background-color: #FFFFF8;
+    margin: 0;
+    padding: 0;
+  }
+  .refresh-button {
+    border: 1px solid #DDD;
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+    background-color: #F8FFFF;
+    margin: 0 1em;
+    padding: 0;
+  }
